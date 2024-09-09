@@ -1,4 +1,4 @@
-name: Linting and Static Analysis
+name: Static Analysis
 
 on:
   push:
