@@ -38,9 +38,3 @@ def recombine(left_arr, right_arr):
         merge_arr[left_index + right_index] = left_arr[i]
 
     return merge_arr
-
-
-arr_to_sort = rand.random_array([None] * 20)
-arr_out = merge_sort(arr_to_sort)
-
-print(arr_out)
