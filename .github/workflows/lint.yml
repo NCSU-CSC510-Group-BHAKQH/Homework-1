@@ -25,4 +25,7 @@ jobs:
           pip install autopep8 pylint
       - name: Run AutoPep8
         run: autopep8 --in-place --aggressive --recursive ..
+      - name: Run Pylint
+        run: |
+          pylint $(find . -type f -name "*.py")
       
