@@ -1,7 +1,7 @@
 """
 Helper 'random' methods for merge-sort impl in hw2_debugging.py.
 """
-import subprocess # nosec
+import subprocess  # nosec
 
 
 def random_array(arr):
@@ -11,6 +11,7 @@ def random_array(arr):
     shuffled_num = None
     for i, _ in enumerate(arr):
         shuffled_num = subprocess.run(
-            ["/usr/bin/env", "shuf", "-i1-20", "-n1"], capture_output=True, check=True) # nosec
+            # nosec
+            ["/usr/bin/env", "shuf", "-i1-20", "-n1"], capture_output=True, check=True)
         arr[i] = int(shuffled_num.stdout)
     return arr

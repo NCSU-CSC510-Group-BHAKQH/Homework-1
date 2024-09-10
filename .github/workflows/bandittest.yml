@@ -1,0 +1,28 @@
+name: Bandit
+
+on:
+  push:
+    branches:
+      - main
+      - hw2badges
+  pull_request:
+    branches:
+      - main
+      - hw2badges
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.13.0-rc.1'
+      - name: Install dependencies
+        run: |
+          pip install bandit      
+      - name: Run Bandit
+        run: |
+          bandit -r .
