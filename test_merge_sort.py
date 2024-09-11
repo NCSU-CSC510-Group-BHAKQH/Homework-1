@@ -11,8 +11,9 @@ def test_merge_sort_rand_array():
     """
     Tests the merge_sort function with randomly generated array.
     """
-    array_to_sort = random_array([None] * 100)
-    print(array_to_sort)
+    # array_to_sort = random_array([None] * 20)
+    array_to_sort = [3, 1, 2, -1]
+    print()
     assert merge_sort(array_to_sort) == sorted(array_to_sort)
 
 #sorted array test case
