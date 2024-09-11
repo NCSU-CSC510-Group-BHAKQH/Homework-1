@@ -1,7 +1,6 @@
 """
 Python merge-sort implementation.
 """
-import rand
 
 
 def merge_sort(arr):

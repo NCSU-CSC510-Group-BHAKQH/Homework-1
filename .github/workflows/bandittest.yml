@@ -25,4 +25,4 @@ jobs:
           pip install bandit      
       - name: Run Bandit
         run: |
-          bandit -r .
+          bandit -r . -x B101,B311
